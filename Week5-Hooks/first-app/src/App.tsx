@@ -12,8 +12,8 @@ function App() {
       {/* <Counter initialCount={5} /> */}
       {/* <NoDepencyEffect/> */}
       {/* <EmptyDependencyEffect/> */}
-      {/* <UserFrom/> */}
-      <Counter/>
+      <UserFrom/>
+      {/* <Counter/> */}
     </>
   )
 }
