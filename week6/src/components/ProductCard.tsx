@@ -21,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       <img 
         src={imageUrl}
         alt={title}
-        className="box-border size-10 w-full h-48 object-cover "
+        className="w-full h-48 object-cover "
       />
       <div className="p-4 flex flex-col flex-grow">
         <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
