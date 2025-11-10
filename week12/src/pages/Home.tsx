@@ -1,42 +1,49 @@
-import { Box, Container, Heading, Text, Card, Flex } from "@radix-ui/themes";
-
 function Home() {
-    return (
-        <Container size="3" py="7" >
-            <Box>
-                <Heading size="3" mb="4" style={{ fontWeight: 600, textAlign: "center" }}>
-                    WELLCOME TO KEYYESS
-                </Heading>
-                <Text size="4" mb="6" style={{ textAlign: "center", opacity: 0.8 }}>
-                    เว็บไซต์แนะนำตัวและประวัติส่วนตัว
-                </Text>
+  return (
+    <div className="min-h-screen bg-white text-black flex justify-center items-center px-6 py-16">
+      <div className="max-w-4xl w-full bg-white shadow-xl rounded-3xl p-10 border border-gray-200">
+        {/* ส่วนหัว */}
+        <div className="text-center mb-10">
+          <h1 className="text-5xl font-extrabold text-black drop-shadow-sm mb-4">
+            WELCOME TO MY WEBSITE
+          </h1>
+          <p className="text-lg text-gray-700">
+            เว็บไซต์แนะนำตัวและประวัติส่วนตัว
+          </p>
+        </div>
 
-                <Flex direction="column" gap="4">
-                    <Card variant="surface" style={{backgroundColor: "var(--gray-2)", border: "1px solid var(--gray-4)", boxShadow: "0 2px 6px var(--gray-3)",}}>
-                        <Heading size="5" mb="2">
-                            เกี่ยวกับเว็บไซต์นี้
-                        </Heading>
-                        <Text size="3" color="gray">
-                            เว็บไซต์นี้สร้างขึ้นเพื่อแสดงเนื้อหาข้อมูลส่วนตัว
-                            ประวัติการศึกษาและผลงานทางด้านต่างๆ โดยใช้เทคโนโลยี React, React Router และ Radix UI
-                        </Text>
-                    </Card>
+        {/* การ์ดข้อมูล */}
+        <div className="flex flex-col gap-8">
+          {/* การ์ด 1 */}
+          <div className="bg-white p-6 rounded-2xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300">
+            <h2 className="text-2xl font-semibold text-black mb-3">
+              เกี่ยวกับเว็บไซต์นี้
+            </h2>
+            <p className="text-gray-800 leading-relaxed">
+              เว็บไซต์นี้สร้างขึ้นเพื่อแสดงข้อมูลส่วนตัว ประวัติการศึกษา และผลงานทางด้านต่าง ๆ
+              โดยใช้เทคโนโลยี{" "}
+              <span className="font-semibold text-blue-600">React</span>,{" "}
+              <span className="font-semibold text-blue-600">React Router</span>, และ{" "}
+              <span className="font-semibold text-blue-600">Radix UI</span>
+            </p>
+          </div>
 
-                    <Card variant="surface" style={{backgroundColor: "var(--gray-2)", border: "1px solid var(--gray-4)", boxShadow: "0 2px 6px var(--gray-3)",}}>
-                        <Heading size="5" mb="2">
-                            เทคโนโลยีที่ใช้
-                        </Heading>
-                        <Text size="3" color="gray">
-                            • React 19 + TypeScript <br />
-                            • React Router สำหรับการจัดการหน้า <br />
-                            • Radix UI สำหรับ UI Components <br />
-                            • Vite สำหรับ Build Tool
-                        </Text>
-                    </Card>
-                </Flex>
-            </Box>
-        </Container>
-    );
+          {/* การ์ด 2 */}
+          <div className="bg-gray-50 p-6 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300">
+            <h2 className="text-2xl font-semibold text-black mb-3">
+              เทคโนโลยีที่ใช้
+            </h2>
+            <ul className="text-gray-800 space-y-2 leading-relaxed">
+              <li>• React 19 + TypeScript</li>
+              <li>• React Router สำหรับการจัดการหน้า</li>
+              <li>• Radix UI สำหรับ UI Components</li>
+              <li>• Vite สำหรับ Build Tool</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Home;
