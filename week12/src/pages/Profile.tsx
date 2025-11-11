@@ -3,14 +3,14 @@ import { SiTailwindcss, SiTypescript } from 'react-icons/si';
 
 function Profile() {
   const skills = [
-    { name: 'HTML5', icon: <FaHtml5 className="text-amber-600 w-8 h-8" />, level: 90 },
-    { name: 'CSS3', icon: <SiTailwindcss className="text-teal-600 w-8 h-8" />, level: 85 },
-    { name: 'JavaScript', icon: <FaJs className="text-yellow-600 w-8 h-8" />, level: 85 },
-    { name: 'TypeScript', icon: <SiTypescript className="text-sky-600 w-8 h-8" />, level: 80 },
+    { name: 'HTML5', icon: <FaHtml5 className="text-amber-600 w-8 h-8" />, level: 100 },
+    { name: 'CSS3', icon: <SiTailwindcss className="text-teal-600 w-8 h-8" />, level: 95 },
+    { name: 'JavaScript', icon: <FaJs className="text-yellow-600 w-8 h-8" />, level: 40 },
+    { name: 'TypeScript', icon: <SiTypescript className="text-sky-600 w-8 h-8" />, level: 45 },
     { name: 'React', icon: <FaReact className="text-sky-500 w-8 h-8" />, level: 85 },
-    { name: 'Node.js', icon: <FaNodeJs className="text-green-700 w-8 h-8" />, level: 75 },
-    { name: 'Git', icon: <FaGit className="text-orange-700 w-8 h-8" />, level: 80 },
-    { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-500 w-8 h-8" />, level: 80 },
+    { name: 'Node.js', icon: <FaNodeJs className="text-green-700 w-8 h-8" />, level: 35 },
+    { name: 'Git', icon: <FaGit className="text-orange-700 w-8 h-8" />, level: 100 },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-500 w-8 h-8" />, level: 75 },
   ];
 
   return (
