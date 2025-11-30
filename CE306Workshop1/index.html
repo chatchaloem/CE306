@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang = "th">
+<head>
+    <meta charset = :UTF-8 />
+    <meta name = "viewport" content = "width = device-width , initial-scale = 1.0"/>
+    <title>ตัวอย่างหน้าเว็บพื้นฐาน</title>
+</head>
+<body>
+
+    <!--ส่วนหัวของเว็บไซต์-->
+    <header>
+        <h1>ยินดีต้อนรับเข้าสู่เว็บไซต์ของฉัน</h1>
+        <p>เว็บไซต์ตัวอย่างสำหรับเรียนรู้พื้นฐาน HTML</p>
+    </header>
+    <!--ส่วนแสดงโปรไฟล์-->
+    <section>
+        <h2>โปรไฟล์ของฉัน</h2>
+        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0VfLQQSidncgUlYpx5TkoD1_UmAPAye3y_7c5a8lLLIdm6sMmvT4i7boKDYhXj9SZnnE&usqp=CAU" alt = "รูปโปรไฟล์" width = "150" />
+        <p> ชื่อ : ฉัตรเฉลิม เล้าวาลิต </p>
+        <p> อาชีพ : นักศึกษา </p>
+        <a href = "https://facebook.com" target = "_blank"> ไปที่ Facebook</a>
+    </section>
+
+
+    <hr  />
+</body>
+</html>
+
+
+    <!--ส่วนของแบบฟอร์ม-->
+    <section>
+        <h2>ฟอร์มสมัคสมาชิก</h2>
+        <form action = "#" method="post">
+            <div>
+                <label for = "fullname">ชื่อ - นามสกุล:</label>
+                <input type = "text" id = "fullname " name = "fullname" required />
+            </div>
+            <div>
+                <label for = "email">อีเมล:</label>
+                <input type = "email" id = "email " name = "email" required />
+            </div>
+            <div>
+                <label for = " gender">เพศ:</label>
+                <select id = "gender" name = "gender">
+                    <option value="male">ชาย</option>
+                    <option value = "female">หญิง</option>
+                    <option value="other">อื่นๆ</option>
+                </select>
+            </div>
+            <div>
+                <label for = "about">เกียวกับคุณ:</label><br  />
+                <textarea id = "about" name = "about" rows = "4" cols = "40"></textarea>
+            </div>
+            <div>
+                <label for = "photo">อัพโหลดรูปโปรไฟล์</label>
+                <input type = "file" id = "photo" name = "photo" />
+            </div>
+            <div>
+                <button type = "submit">ส่งข้อมูล</button>
+            </div>
+        </form>
+    </section>
+
+<table border = "1" cellpadding = "8">
+    <thead>
+        <tr>
+            <th>ลำดับ</th>
+            <th>ชื่อ</th>
+            <th colspan = "2">ข้อมูลติดต่อ</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan = "2">1</td>
+            <td rowspan = "2">สมชาย ใจดี</td>
+            <td>อีเมล</td>
+            <td>somchai@example.com</td>
+        </tr>
+        <tr>
+            <td>โทรศัพท์</td>
+            <td> 085 - 649 - 6451</td>
+        </tr>
+        </tbody>
+    </tbody>

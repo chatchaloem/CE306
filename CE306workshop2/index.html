@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="#">
+
+    <style>
+        p{
+            color : red;
+            font-size: 18px;
+        }
+        h1{
+            text-align: center;
+        }
+        #header{
+            background-color: aliceblue;
+            padding: 20px;
+        }
+        #main-content{
+            border: 1px solid goldenrod;
+        }
+
+        .highlight{
+            background-color: antiquewhite;
+            font-weight: bold;
+        }
+        .error{
+            color: red;
+        }
+
+        div p{
+            background-color: blueviolet;
+            padding: 10px;
+            border: 5px solid blue;
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: aquamarine;
+        }
+
+        /*เมื่อเมาส์ชี้ไปที่ลิงก์ */
+    a:hover{
+        color: brown;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    /* ลิงก์ที่เคยเยี่ยมชมแล้ว */
+    a:visited{
+        color: cadetblue;
+    }
+
+    /*ลิงก์ที่กำลังถุกคลิก*/
+    a:active{
+        color: chartreuse;
+    }
+
+    div p:first-child{
+        background-color: cornflowerblue;
+        padding: 10px;
+        border: 1px dashed orange;
+
+    }
+
+    div p:last-child{
+        background-color: chartreuse;
+        padding: 10px;
+        border: 1px dashed blue;
+
+    }
+
+    input[type ="text"] :focus{
+        border-color: burlywood;
+        box-shadow: 0 0 5px rgba(76,175,80,0.5);
+        outline: none;
+    }
+    </style>
+</head>
+    
+<body>
+    <h1>สวัสดีโลก</h1>
+    <p>นี่คือย่อหน้าแรก</p>
+    <p>นี่คือย่อหน้าหลัง</p>
+
+    <div id = "header">
+        <h1>เว็บไซ์ของฉัน</h1>
+    </div>
+    <p>ข้อความทั่วไป</p>
+    <div id = "main-content">
+        <p>เนื้อหาหลังของหน้า</p>
+    </div>
+
+    <p>ข้อความปกติ</p>
+    <p class = "highlight">ข้อความนี้จะถูกเน้น</p>
+    <div class = "error">
+        เกิดข้อผิดพลาดขึ้น
+    </div>
+    <span class = "highlight">และนี่ก็ถูกเน้นด้วย</span>
+
+    <div class="container">
+        <p>นี่คือย่อหน้าที่อยู่ภายใน div </p>
+        <span>
+            <p>นี่คือย่อหน้าที่อยู่ภายใน span ซึ่งอยู่ภายใน div (ถูกเลือก)</p>
+        </span>
+    </div>
+
+    <p>นี่คือย่อหน้าที่อยู่ภายนอก div </p>
+
+    <section>
+        <p>นี่คือย่อหน้าที่อยู่ภายใน section</p>
+    </section>
+
+    <h1>pseudo-classes Demo</h1>
+
+    <h2>ลิงก์</h2>
+    <p>ลองวางเมาส์เหนือลิงก์และลิกดู:</p>
+    <a href="https://www.google.com" target="_blank">Google</a><br>
+    <a href="https://www.w3schools.com" target="_blank">w3schools</a><br>
+    <a href="#">ลิงก์ที่ไม่ไปไหน</a>
+
+    <h2>ย่อหน้าใน div</h2>
+    <div>
+        <p>ย่อหน้านี้คือ **First Child ** ของ div (จะมีพื้นหลังสีเหลือง)</p>
+        <p>ย่อหน้านี้เป็นย่อหน้าปกติ</p>
+        <span>นี่คือ span</span>
+        <p>ย่อหน้านี้คือ **Last Child** ของ div (จะมีพืนหลังสีฟ้า)</p>
+    </div>
+
+    <h2>ช่องกรอกข้อมูล</h2>
+    <label for="username">ชื่อผู้ใช้</label>
+    <input type="text" id ="username"placeholder="พิมพ์ชื่อของคุณ"><br><br>
+    <label for="email">อีเมล</label>
+    <input type="email" id="email" placeholder="พิมพ์อีเมลของคุณ">
+
+</body>
+</html>

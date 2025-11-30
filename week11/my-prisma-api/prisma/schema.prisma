@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User { // กำหนดโมเดลสำหรับ User ซึ่งจะถูกแมปไปสร้างตารางชื่อ User ในฐานข้อมูล
+  Userid     String   @id @default(uuid()) @db.Uuid   // ใช้ UUID เป็น Primary Key
+  email      String   @unique              // อีเมลต้องไม่ซ้ำกัน
+  name       String?                      // มีอยู่ในบางกรณีเท่านั้น null ได้
+  createdAt  DateTime @default(now())     // วันที่สร้างบัญชีผู้ใช้ และมีค่าเริ่มต้นเป็นเวลาปัจจุบัน (@default(now()))
+  posts      Post[]                       // เพิ่มความสัมพันธ์: หนึ่ง User มีหลาย Post
+}
+
+model Post { // กำหนดโมเดลสำหรับ Post ซึ่งจะถูกแมปไปสร้างตารางชื่อ Post ในฐานข้อมูล
+  postId      String   @id @default(uuid()) @db.Uuid   // ใช้ UUID เป็น Primary Key
+  title       String                           // หัวข้อของโพสต์
+  content     String?                          // เนื้อหาของโพสต์ สามารถเป็น null ได้
+  published   Boolean  @default(false)         // สถานะการเผยแพร่โพสต์ ตั้งค่าเริ่มต้นเป็น false
+  author      User     @relation(fields: [authorId], references: [Userid]) // ความสัมพันธ์กับตาราง User
+  authorId    String   @db.Uuid                // Foreign Key
+  createdAt   DateTime @default(now())         // วันที่สร้างโพสต์ ตั้งค่าเริ่มต้นเป็นเวลาปัจจุบัน (@default(now()))
+  updatedAt   DateTime @updatedAt              // วันที่อัปเดตข้อมูลล่าสุด
+}

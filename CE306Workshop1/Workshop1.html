@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang = "th">
+<head>
+    <meta charset = :UTF-8 />
+    <meta name = "viewport" content = "width = device-width , initial-scale = 1.0"/>
+    <title>www.VyHub.com</title>
+</head>
+<body>
+
+    <!--ส่วนหัวของเว็บไซต์-->
+    <header>
+        <h1>WELCOME TO MY WEBSITE</h1>
+        <p>This is my information!!!</p>
+    </header>
+    <!--ส่วนแสดงโปรไฟล์-->
+    <section>
+        <h2>My profile</h2>
+        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0VfLQQSidncgUlYpx5TkoD1_UmAPAye3y_7c5a8lLLIdm6sMmvT4i7boKDYhXj9SZnnE&usqp=CAU" alt = "รูปโปรไฟล์" width = "150" />
+        <p> ชื่อ : Chatchaloem Laowalit </p>
+        <p> อาชีพ : student </p>
+        <a href = "https://instagram.com" target = "_blank"> ไปที่ instagram</a>
+    </section>
+
+
+    <hr  />
+</body>
+</html>
+
+
+    <!--ส่วนของแบบฟอร์ม-->
+    <section>
+        <h2>Contact form</h2>
+        <form action = "#" method="post">
+            <div>
+                <label for = "fullname">name-surname:</label>
+                <input type = "text" id = "fullname " name = "fullname" required />
+            </div>
+            <div>
+                <label for = "email">Email:</label>
+                <input type = "email" id = "email " name = "email" required />
+            </div>
+            <div>
+                <label for = " gender">Sex:</label>
+                <select id = "gender" name = "gender">
+                    <option value="male">male</option>
+                    <option value = "female">female</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+            <div>
+                <label for = "about">about me:</label><br  />
+                <textarea id = "about" name = "about" rows = "4" cols = "40"></textarea>
+            </div>
+            <div>
+                <label for = "photo">Upload Profile</label>
+                <input type = "file" id = "photo" name = "photo" />
+            </div>
+            <div>
+                <button type = "submit">submit</button>
+            </div>
+        </form>
+    </section>
+
+<table border = "1" cellpadding = "8">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>name</th>
+            <th colspan = "2">Contact information</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan = "2">1</td>
+            <td rowspan = "2">Mr.john wick</td>
+            <td>Email</td>
+            <td>John@example.com</td>
+        </tr>
+        <tr>
+            <td>Phon number</td>
+            <td> 085 - 649 - 6451</td>
+        </tr>
+        </tbody>
+    </tbody>
